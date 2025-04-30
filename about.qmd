@@ -1,0 +1,11 @@
+---
+title: "About"
+---
+
+About this site
+
+My name is **David Kane**, and I graduated from *Williams College*.
+
+[Kane's Free Data Science Bootcamp](https://bootcamp.davidkane.info)
+
+show_file("about.qmd", pattern = "Kane")
