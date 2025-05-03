@@ -1,32 +1,123 @@
 ---
-title: "My Cool Plot"
+title: "Home"
 ---
 
+This is my website. I researched about AI.
+
+
 ```{r}
-#| message: false
-#| echo: false
+library(tidyverse)
+options(scipen=999)
 
-#| label: setup
+data <- read.csv("dataset.csv")
 
+data2 <- data[order(data$Baseline, decreasing = TRUE),]
+
+
+
+graphic1 <- ggplot(data2, mapping = aes(y=Baseline, x= reorder(Industry, -Baseline))) +
+         geom_bar(stat = "identity") +
+  labs(title="Baseline vs Industry",
+       x="Baseline",
+       y="Industry") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+graphic1
+
+```
+
+
+
+```{r}
+library(tidyverse)
+options(scipen=999)
+
+data <- read.csv("dataset.csv")
+
+data3 <- data[order(data$Additional.AI.Contribution, decreasing = TRUE),]
+
+
+
+graphic1 <- ggplot(data2, mapping = aes(y=Additional.AI.Contribution, x= reorder(Industry, -Additional.AI.Contribution))) +
+         geom_bar(stat = "identity") +
+  labs(title="AI.Contribution vs Industry",
+       x="AI.Contribution",
+       y="Industry") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+graphic1
 
 ```
 
 
 ```{r}
 library(tidyverse)
+options(scipen=999)
+
+data <- read.csv("dataset.csv")
+
+data2 <- data[order(data$Baseline, decreasing = TRUE),]
+
+
+
+graphic1 <- ggplot(data2, mapping = aes(y=Baseline, x= reorder(Industry, -Baseline))) +
+         geom_bar(stat = "identity") +
+  labs(title="Baseline vs Industry",
+       x="Baseline",
+       y="Industry") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+graphic1
+
+```
+
+
+
+```{r}
+library(tidyverse)
+options(scipen=999)
+
+automation <- read.csv("automation.csv")
+
+automation2 <- automation[order(automation$Share.of.Employment, decreasing = TRUE),]
+
+
+
+graphic11 <- ggplot(automation2, mapping = aes(y=Share.of.Employment, x= reorder(Industry, -`Share.of.Employment`))) +
+         geom_bar(stat = "identity") +
+  labs(title="Share.of.Employment vs Industry",
+       x="Share.of.Employment",
+       y="Industry") +
+  theme(axis.text.x = element_text(angle = 75, hjust = 1))
+
+
+graphic11
+
 ```
 
 
 ```{r}
-diamonds |> 
-  filter(z != 0) |> 
-  filter(color == "D") |> 
-  ggplot(aes(x = carat, y = price, color = cut)) + 
-    geom_point() +
-    scale_y_continuous(labels = scales::dollar) +
-    labs(title = "Prices and Sizes for Diamonds of Color D",
-         subtitle = "'Round' carat values like 1, 1.5 and 2 are more common.",
-         x = "Carat",
-         y = "Price")
-```
+library(tidyverse)
+options(scipen=999)
 
+automation <- read.csv("automation.csv")
+
+automation2 <- automation[order(automation$Risk.of.Job.Automation
+, decreasing = TRUE),]
+
+
+
+graphic11 <- ggplot(automation2, mapping = aes(y=Risk.of.Job.Automation, x= reorder(Industry, -`Risk.of.Job.Automation`))) +
+         geom_bar(stat = "identity") +
+  labs(title="Risk.of.Job.Automation vs Industry",
+       x="Risk.of.Job.Automation",
+       y="Industry") +
+  theme(axis.text.x = element_text(angle = 75, hjust = 1))
+
+
+graphic11
+
+```

@@ -4,8 +4,4 @@ title: "About"
 
 About this site
 
-My name is **David Kane**, and I graduated from *Williams College*.
-
-[Kane's Free Data Science Bootcamp](https://bootcamp.davidkane.info)
-
-show_file("about.qmd", pattern = "Levon")
+My name is **Levon Poghosyan**, and I made dataset about AI, what is the best AI, how much cost AI now etc. .
