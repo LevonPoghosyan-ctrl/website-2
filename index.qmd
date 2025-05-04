@@ -22,3 +22,13 @@ The economic potential of AI is enormous. It’s projected to contribute trillio
 AI is a fast-moving field. New developments are happening every day. Statistics showing the most popular AI tools, applications, or the rate of new patents in the field give insight into where innovation is happening. This helps stakeholders in the tech industry stay relevant.
 
 In essence, the AI statistics you find in reports or articles highlight why this is such a pivotal moment in technology. Whether you're a developer, business owner, or even just a consumer, staying informed about AI trends allows you to be proactive in understanding both its opportunities and challenges.
+
+
+```{r}
+#| echo: false
+#| message: false
+
+library(magick)
+img <- image_read("img/pic.png")
+plot(img)
+```

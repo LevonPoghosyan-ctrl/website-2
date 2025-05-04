@@ -57,7 +57,16 @@ graphic1
 
 ```
 
-In last two data sets we compare "Baseline vs Industry" and "AI.Contribution vs Industry". We see that in "Baseline vs Industry" most valuable Industry is "Manufacturing" but in "AI.Contribution vs Industry" we see that the most valuable Industry is "Wholesale and Retail".
+```{r}
+#| echo: false
+#| message: false
+
+library(magick)
+img <- image_read("img/pip.png")
+plot(img)
+```
+
+In first and second data sets we compare "Baseline vs Industry" and "AI.Contribution vs Industry". We see that in "Baseline vs Industry" most valuable Industry is "Manufacturing" but in "AI.Contribution vs Industry" we see that the most valuable Industry is "Wholesale and Retail".
 
 
 
@@ -119,12 +128,5 @@ graphic11
 In the last two data sets we saw which sectors will be automated over time.
 
 
-```{r}
-#| echo: false
-#| message: false
 
-library(magick)
-img <- image_read("img")
-plot(img)
-```
 
