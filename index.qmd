@@ -2,108 +2,23 @@
 title: "Home"
 ---
 
-This is my website. I researched about AI.
+1. **AI's Rapid Growth and Influence**:
 
+AI is transforming industries at an accelerated pace, from healthcare and finance to transportation and entertainment. Understanding the latest AI statistics is crucial for staying ahead in any field. For example, knowing the adoption rates of AI across sectors can help businesses identify opportunities for innovation and investment.
 
-```{r}
-library(tidyverse)
-options(scipen=999)
+2. **Shaping Decision Making**:
+For businesses, startups, or even government policymakers, understanding the trends and data around AI helps guide strategic decisions. Whether it's for resource allocation, product development, or anticipating future challenges, AI stats provide hard data for informed decision-making.
 
-data <- read.csv("dataset.csv")
+3. **Raising Awareness**:
+AI is increasingly involved in everyday life, but many people may not fully realize its scope or implications. Showing data on how AI is integrated into daily tasks (like how many people use AI-powered devices or software) can help raise awareness about its presence and importance.
 
-data2 <- data[order(data$Baseline, decreasing = TRUE),]
+4. **Understanding Potential Risks**:
+Along with AI’s incredible potential comes the need to address ethical and societal concerns. Statistics like how many jobs may be automated or how AI impacts privacy and data security can guide responsible development. This helps frame debates about regulations, fairness, and transparency in AI systems.
 
+5. **AI’s Economic Impact**:
+The economic potential of AI is enormous. It’s projected to contribute trillions of dollars to the global economy over the coming years. For companies, understanding these figures can help prioritize AI investments to stay competitive.
 
+6. **Tracking Innovation**:
+AI is a fast-moving field. New developments are happening every day. Statistics showing the most popular AI tools, applications, or the rate of new patents in the field give insight into where innovation is happening. This helps stakeholders in the tech industry stay relevant.
 
-graphic1 <- ggplot(data2, mapping = aes(y=Baseline, x= reorder(Industry, -Baseline))) +
-         geom_bar(stat = "identity") +
-  labs(title="Baseline vs Industry",
-       x="Baseline",
-       y="Industry") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
-
-
-graphic1
-
-```
-
-
-
-```{r}
-library(tidyverse)
-options(scipen=999)
-
-data <- read.csv("dataset.csv")
-
-data3 <- data[order(data$Additional.AI.Contribution, decreasing = TRUE),]
-
-
-
-graphic1 <- ggplot(data2, mapping = aes(y=Additional.AI.Contribution, x= reorder(Industry, -Additional.AI.Contribution))) +
-         geom_bar(stat = "identity") +
-  labs(title="AI.Contribution vs Industry",
-       x="AI.Contribution",
-       y="Industry") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
-
-
-graphic1
-
-```
-
-In last two data sets we compare "Baseline vs Industry" and "AI.Contribution vs Industry". We see that in "Baseline vs Industry" most valuable Industry is "Manufacturing" but in "AI.Contribution vs Industry" we see that the most valuable Industry is "Wholesale and Retail".
-
-
-
-```{r}
-library(tidyverse)
-options(scipen=999)
-
-automation <- read.csv("automation.csv")
-
-automation2 <- automation[order(automation$Share.of.Employment, decreasing = TRUE),]
-
-
-
-graphic11 <- ggplot(automation2, mapping = aes(y=Share.of.Employment, x= reorder(Industry, -`Share.of.Employment`))) +
-         geom_bar(stat = "identity") +
-  labs(title="Share.of.Employment vs Industry",
-       x="Share.of.Employment",
-       y="Industry") +
-  theme(axis.text.x = element_text(angle = 75, hjust = 1))
-
-
-graphic11
-
-```
-
-
-
-
-
-```{r}
-library(tidyverse)
-options(scipen=999)
-
-automation <- read.csv("automation.csv")
-
-automation2 <- automation[order(automation$Risk.of.Job.Automation
-, decreasing = TRUE),]
-
-
-
-graphic11 <- ggplot(automation2, mapping = aes(y=Risk.of.Job.Automation, x= reorder(Industry, -`Risk.of.Job.Automation`))) +
-         geom_bar(stat = "identity") +
-  labs(title="Risk.of.Job.Automation vs Industry",
-       x="Risk.of.Job.Automation",
-       y="Industry") +
-  theme(axis.text.x = element_text(angle = 75, hjust = 1))
-
-
-graphic11
-
-```
-
-
-
-In the last two data sets we saw which sectors will be automated over time.
+In essence, the AI statistics you find in reports or articles highlight why this is such a pivotal moment in technology. Whether you're a developer, business owner, or even just a consumer, staying informed about AI trends allows you to be proactive in understanding both its opportunities and challenges.

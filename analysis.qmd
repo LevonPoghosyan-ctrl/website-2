@@ -8,6 +8,8 @@ This is my website. I researched about AI.
 
 
 ```{r}
+#| echo: false
+#| message: false
 library(tidyverse)
 options(scipen=999)
 
@@ -17,7 +19,7 @@ data2 <- data[order(data$Baseline, decreasing = TRUE),]
 
 
 
-graphic1 <- ggplot(data2, mapping = aes(y=Baseline, x= reorder(Industry, -Baseline))) +
+graphic1 <- ggplot(data2, mapping = aes(y=Baseline, x= reorder(Industry, -Baseline), fill = Industry)) +
          geom_bar(stat = "identity") +
   labs(title="Baseline vs Industry",
        x="Baseline",
@@ -32,6 +34,8 @@ graphic1
 
 
 ```{r}
+#| echo: false
+#| message: false
 library(tidyverse)
 options(scipen=999)
 
@@ -41,7 +45,7 @@ data3 <- data[order(data$Additional.AI.Contribution, decreasing = TRUE),]
 
 
 
-graphic1 <- ggplot(data2, mapping = aes(y=Additional.AI.Contribution, x= reorder(Industry, -Additional.AI.Contribution))) +
+graphic1 <- ggplot(data2, mapping = aes(y=Additional.AI.Contribution, x= reorder(Industry, -Additional.AI.Contribution), fill = Industry)) +
          geom_bar(stat = "identity") +
   labs(title="AI.Contribution vs Industry",
        x="AI.Contribution",
@@ -58,6 +62,8 @@ In last two data sets we compare "Baseline vs Industry" and "AI.Contribution vs 
 
 
 ```{r}
+#| echo: false
+#| message: false
 library(tidyverse)
 options(scipen=999)
 
@@ -67,7 +73,7 @@ automation2 <- automation[order(automation$Share.of.Employment, decreasing = TRU
 
 
 
-graphic11 <- ggplot(automation2, mapping = aes(y=Share.of.Employment, x= reorder(Industry, -`Share.of.Employment`))) +
+graphic11 <- ggplot(automation2, mapping = aes(y=Share.of.Employment, x= reorder(Industry, -`Share.of.Employment`), fill = Industry)) +
          geom_bar(stat = "identity") +
   labs(title="Share.of.Employment vs Industry",
        x="Share.of.Employment",
@@ -84,6 +90,8 @@ graphic11
 
 
 ```{r}
+#| echo: false
+#| message: false
 library(tidyverse)
 options(scipen=999)
 
@@ -94,7 +102,7 @@ automation2 <- automation[order(automation$Risk.of.Job.Automation
 
 
 
-graphic11 <- ggplot(automation2, mapping = aes(y=Risk.of.Job.Automation, x= reorder(Industry, -`Risk.of.Job.Automation`))) +
+graphic11 <- ggplot(automation2, mapping = aes(y=Risk.of.Job.Automation, x= reorder(Industry, -`Risk.of.Job.Automation`), fill = Industry)) +
          geom_bar(stat = "identity") +
   labs(title="Risk.of.Job.Automation vs Industry",
        x="Risk.of.Job.Automation",
@@ -109,3 +117,14 @@ graphic11
 
 
 In the last two data sets we saw which sectors will be automated over time.
+
+
+```{r}
+#| echo: false
+#| message: false
+
+library(magick)
+img <- image_read("img")
+plot(img)
+```
+
