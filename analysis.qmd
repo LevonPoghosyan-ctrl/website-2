@@ -1,6 +1,8 @@
 ---
-title: "Home"
+title: "Data Analysis"
+editor: visual
 ---
+
 
 This is my website. I researched about AI.
 
