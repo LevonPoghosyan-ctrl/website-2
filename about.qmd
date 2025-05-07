@@ -1,7 +1,7 @@
 ---
-title: "About"
+title: "About Me"
 ---
 
 About this site
 
-My name is **Levon Poghosyan**, and I made dataset about AI, what is the best AI, how much cost AI now etc. .
+As you know my name is **Levon Poghosyan**. I am 12 years old. I am from Kapan Armenia.

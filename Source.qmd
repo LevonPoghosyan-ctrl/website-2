@@ -3,7 +3,4 @@ title: "Source"
 editor: visual
 ---
 
-I take this data from this link https://explodingtopics.com/blog/ai-statistics
-                                                       ||
-                                                       \/
-                                                this site is from 2024 ---
+I take this data from this link  <https://explodingtopics.com/blog/ai-statistics> => this site is from 2024 ---

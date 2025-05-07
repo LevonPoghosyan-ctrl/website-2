@@ -3,9 +3,7 @@ title: "Data Analysis"
 editor: visual
 ---
 
-
 This is my website. I researched about AI.
-
 
 ```{r}
 #| echo: false
@@ -24,14 +22,15 @@ graphic1 <- ggplot(data2, mapping = aes(y=Baseline, x= reorder(Industry, -Baseli
   labs(title="Baseline vs Industry",
        x="Baseline",
        y="Industry") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))+
+
+  theme(legend.position = "none") 
+
 
 
 graphic1
 
 ```
-
-
 
 ```{r}
 #| echo: false
@@ -47,28 +46,20 @@ data3 <- data[order(data$Additional.AI.Contribution, decreasing = TRUE),]
 
 graphic1 <- ggplot(data2, mapping = aes(y=Additional.AI.Contribution, x= reorder(Industry, -Additional.AI.Contribution), fill = Industry)) +
          geom_bar(stat = "identity") +
-  labs(title="AI.Contribution vs Industry",
-       x="AI.Contribution",
+  labs(title="AI Contribution vs Industry",
+       x="AI Contribution",
        y="Industry") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))+
+
+  theme(legend.position = "none") 
+
 
 
 graphic1
 
 ```
 
-```{r}
-#| echo: false
-#| message: false
-
-library(magick)
-img <- image_read("img/pip.png")
-plot(img)
-```
-
-In first and second data sets we compare "Baseline vs Industry" and "AI.Contribution vs Industry". We see that in "Baseline vs Industry" most valuable Industry is "Manufacturing" but in "AI.Contribution vs Industry" we see that the most valuable Industry is "Wholesale and Retail".
-
-
+**In first and second data sets we compare "Baseline vs Industry" and "AI.Contribution vs Industry". We see that in "Baseline vs Industry" most valuable Industry is "Manufacturing" but in "AI.Contribution vs Industry" we see that the most valuable Industry is "Wholesale and Retail".**
 
 ```{r}
 #| echo: false
@@ -84,19 +75,17 @@ automation2 <- automation[order(automation$Share.of.Employment, decreasing = TRU
 
 graphic11 <- ggplot(automation2, mapping = aes(y=Share.of.Employment, x= reorder(Industry, -`Share.of.Employment`), fill = Industry)) +
          geom_bar(stat = "identity") +
-  labs(title="Share.of.Employment vs Industry",
-       x="Share.of.Employment",
-       y="Industry") +
-  theme(axis.text.x = element_text(angle = 75, hjust = 1))
+  labs(title="Share of Employment vs Industry",
+       y="Share of Employment",
+       x="Industry") +
+  theme(axis.text.x = element_text(angle = 75, hjust = 1))+
+
+  theme(legend.position = "none") 
 
 
 graphic11
 
 ```
-
-
-
-
 
 ```{r}
 #| echo: false
@@ -106,27 +95,23 @@ options(scipen=999)
 
 automation <- read.csv("automation.csv")
 
-automation2 <- automation[order(automation$Risk.of.Job.Automation
-, decreasing = TRUE),]
+automation2 <- automation[order(automation$Risk.of.Job.Automation, decreasing = TRUE),]
 
 
 
 graphic11 <- ggplot(automation2, mapping = aes(y=Risk.of.Job.Automation, x= reorder(Industry, -`Risk.of.Job.Automation`), fill = Industry)) +
          geom_bar(stat = "identity") +
-  labs(title="Risk.of.Job.Automation vs Industry",
-       x="Risk.of.Job.Automation",
-       y="Industry") +
-  theme(axis.text.x = element_text(angle = 75, hjust = 1))
+  labs(title="Risk of Job Automation vs Industry",
+       y="Risk of Automation",
+       x="Industry") +
+  theme(axis.text.x = element_text(angle = 75, hjust = 1)) +
+
+  theme(legend.position = "none") 
+
 
 
 graphic11
 
 ```
 
-
-
-In the last two data sets we saw which sectors will be automated over time.
-
-
-
-
+**In the last two data sets we saw which sectors will be automated over time.**
